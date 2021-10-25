@@ -6,3 +6,4 @@
 
 ### Might as well checked it out fully later on
 1) [Golang for dummies](https://ranjeet-17may.medium.com/golang-for-dummies-533966dfb4f4)
+2) [Learning GO roadmap](https://tysonmaly.com/programming/go/learning-golang/)
