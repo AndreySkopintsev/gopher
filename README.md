@@ -5,5 +5,6 @@
 3) [Get a URL parameter from a Request](https://golangcode.com/get-a-url-parameter-from-a-request/)
 
 ### Might as well checked it out fully later on
-1) [Golang for dummies](https://ranjeet-17may.medium.com/golang-for-dummies-533966dfb4f4)
-2) [Learning GO roadmap](https://tysonmaly.com/programming/go/learning-golang/)
+1) [Golang for dummies](https://ranjeet-17may.medium.com/golang-for-dummies-533966dfb4f4) - pretty self-explanatroy
+2) [Learning GO roadmap](https://tysonmaly.com/programming/go/learning-golang/) - a sort of guide on how to self-study GO with suggested resources
+3) [Go by example](https://gobyexample.com/) - a collection of GO features with code examples.
