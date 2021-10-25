@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
@@ -22,23 +23,75 @@ func handleRequests() {
 }
 
 func addition(w http.ResponseWriter, r *http.Request) {
+	var first int
+	var second int
 
-	fmt.Println(int(r.URL.Query().Get("a")[0]))
+	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
+		first = a
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
+
+	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
+		second = b
+		fmt.Fprintf(w, "The sum is %d", first+second)
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
 }
 
 func subtraction(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Subtraction")
-	fmt.Println("Endpoint hit: subtraction")
+	var first int
+	var second int
+
+	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
+		first = a
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
+
+	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
+		second = b
+		fmt.Fprintf(w, "The sum is %d", first-second)
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
 }
 
 func multiplication(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Multiplication")
-	fmt.Println("Endpoint hit: multiplication")
+	var first int
+	var second int
+
+	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
+		first = a
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
+
+	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
+		second = b
+		fmt.Fprintf(w, "The sum is %d", first*second)
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
 }
 
 func division(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Division")
-	fmt.Println("Endpoint hit: division")
+	var first int
+	var second int
+
+	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
+		first = a
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
+
+	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
+		second = b
+		fmt.Fprintf(w, "The sum is %d", first/second)
+	} else {
+		fmt.Fprintf(w, "There was an error: %d", err)
+	}
 }
 func main() {
 	handleRequests()
