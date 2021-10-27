@@ -36,13 +36,13 @@ func addNumbers(w http.ResponseWriter, r *http.Request) {
 	var result int
 
 	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
-		first = a
+		first = int(a)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
 
 	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
-		second = b
+		second = int(b)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
@@ -61,13 +61,13 @@ func subNumbers(w http.ResponseWriter, r *http.Request) {
 	var result int
 
 	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
-		first = a
+		first = int(a)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
 
 	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
-		second = b
+		second = int(b)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
@@ -86,13 +86,13 @@ func mulNumbers(w http.ResponseWriter, r *http.Request) {
 	var result int
 
 	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
-		first = a
+		first = int(a)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
 
 	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
-		second = b
+		second = int(b)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
@@ -111,13 +111,13 @@ func divNumbers(w http.ResponseWriter, r *http.Request) {
 	var result int
 
 	if a, err := strconv.Atoi(r.URL.Query().Get("a")); err == nil {
-		first = a
+		first = int(a)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
 
 	if b, err := strconv.Atoi(r.URL.Query().Get("b")); err == nil {
-		second = b
+		second = int(b)
 	} else {
 		fmt.Fprintf(w, "There was an error: %d", err)
 	}
